@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/png" href="Assets/style/icon.png">
+    <link rel="stylesheet" href="Assets/style/styles.css?v=1.0">
+     <title>Coding for all</title>
+</head>
+<body>
+   <!-- Example nav structure -->
+<nav>
+    <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="blk" href="Assets/Pages/about.html">About</a>
+        <a href="Assets/Pages/contact.html">Contact</a>
+        <a  class="blk" href="Assets/Pages/html-tutorial.html">HTML Tutorial</a>
+        <a href="Assets/Pages/css-tutorial.html">CSS Tutorial</a>
+    </div>
+</nav>
+    <section class="dashboard">
+        <div class="dashboard_header">
+            <h1>Coding Workshop Hub</h1>
+        </div>
+        <div class="dashboard_content">
+            <div class="intro">
+                <h2>CODING WORKSHOP FOR WOMEN</h2>
+                <h5>Learn The Basic of Coding for HTML & CSS</h5>
+                <p>In this workshop, you will learn the basic of coding for HTML. You will learn how to create a simple web page using HTML. You will also learn how to use CSS to style your web page.</p>
+            </div>
+            <div class="button-group">
+                <button class="right" onclick="location.href='Assets/Pages/html-tutorial.html'">HTML</button>
+                <button class="left" onclick="location.href='Assets/Pages/css-tutorial.html'">CSS</button>
+            </div>
+            <div class="info">
+                <h3>OUR GOALS</h3>
+                <p>To Help Women get started to their career or learning in the coding industry</p><br>
+                <p>And to build the foundation for women to thrive and succeed in technology.</p><br>
+            </div>
+        </div>
+    </section>
+    <script>
+function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+</body>
+</html>

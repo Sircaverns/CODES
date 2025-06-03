@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="icon" type="image/png" href="../style/icon.png">
+    <link rel="stylesheet" href="../style/styles.css?v=1.0">
+     <title>Document</title>
+</head>
+<body>
+   <nav>
+         <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+         <div class="nav-links">    
+            <a href="../../index.html">Home</a>
+            <a class="blk" href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a class="blk"  href="html-tutorial.html">HTML Tutorial</a>
+            <a href="css-tutorial.html">CSS Tutorial</a>
+        </div>
+    </nav>
+    <section class="about-section">
+        <div class="about-container">
+            <h2>About Coding Workshop Hub</h2>
+            <p class="about-mission">
+                <strong>Our Mission:</strong> Empower women to start their journey in coding and technology.
+            </p>
+            <h3>Our Story</h3>
+            <p>
+                Coding Workshop Hub was started to make coding accessible and fun for everyone, especially women who are new to tech. We believe everyone should have the opportunity to learn and thrive in the digital world.
+            </p>
+            <h3>Meet the Team</h3>
+            <ul class="about-team">
+                <li><strong>Emmanuel Geemzon</strong> – Founder & Instructor</li>
+                <li><strong>Mark Lester Venturozo</strong> – Mentor</li>
+                <li><strong>Kam John Mardo</strong> – Mentor</li>
+                <li><strong>John Lloyd Millama</strong> – Mentor</li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        function toggleNav() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

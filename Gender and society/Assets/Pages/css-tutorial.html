@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="icon" type="image/png" href="../style/icon.png">
+    <link rel="stylesheet" href="../style/styles.css?v=1.0">
+    <title>CSS Tutorial</title>
+</head>
+<body>
+    <nav>
+         <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+         <div class="nav-links">    
+        <a href="../../index.html">Home</a>
+        <a class="blk" href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="blk"  href="html-tutorial.html">HTML Tutorial</a>
+        <a href="css-tutorial.html">CSS Tutorial</a>
+    </div>
+</nav>
+    <section class="dashboard">
+        <div class="dashboard_content">
+            <div class="intro">
+                <h2>CSS Basics Tutorial</h2>
+                <p>CSS (Cascading Style Sheets) is used to style and layout web pages.</p>
+            </div>
+            <div class="info">
+                <h3>1. How to Add CSS</h3>
+                <p>There are three ways to add CSS to your HTML:</p>
+                <ul>
+                    <li><strong>Inline:</strong> <code>&lt;h1 style="color:blue;"&gt;Hello&lt;/h1&gt;</code></li>
+                    <li><strong>Internal:</strong>
+                        <pre>
+&lt;style&gt;
+  h1 { color: blue; }
+&lt;/style&gt;
+                        </pre>
+                    </li>
+                    <li><strong>External:</strong>
+                        <pre>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+                        </pre>
+                    </li>
+                </ul>
+                <h3>2. Basic Selectors</h3>
+                <pre>
+h1 {
+  color: blue;
+}
+p {
+  font-size: 16px;
+}
+                </pre>
+                <h3>3. Example: Styling a Button</h3>
+                <pre>
+button {
+  background-color: #472ca1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+                </pre>
+                <h3>4. CSS Components Used in This Page</h3>
+<p>This page uses several important CSS components to create a modern, responsive, and visually appealing layout:</p>
+<ul>
+    <li>
+        <strong>:root</strong> — Defines CSS variables (custom properties) for colors and other values, making it easy to keep your design consistent.
+    </li><br>
+    <li>
+        <strong>body</strong> — Sets the background color for the whole page.
+    </li><br>
+    <li>
+        <strong>nav, a, .blk:hover, a:hover</strong> — Styles the navigation bar and links, including hover effects for interactivity.
+    </li><br>
+    <li>
+        <strong>@media</strong> — Adds responsive design for small screens.
+    </li><br>
+    <li>
+        <strong>.dashboard, .dashboard_header, .dashboard_content</strong> — Uses Flexbox and gradients to create a card-like dashboard layout with a styled header and content area.
+    </li><br>
+    <li>
+        <strong>.intro, .info</strong> — Adds background color, padding, rounded corners, and box shadows to highlight important sections.
+    </li><br>
+    <li>
+        <strong>.button-group, button, button.right, button.left, button:hover</strong> — Centers and styles buttons, including color, padding, rounded corners, and hover effects.
+    </li><br>
+    <li>
+        <strong>.playground, .playground-container, .playground-editor, .playground-preview</strong> — Styles the interactive code playground, including the textarea, run button, and preview area.
+    </li><br>
+</ul>
+<p>Together, these CSS components make the page easy to use, visually attractive, and interactive for learning!</p>
+            </div>
+        </div>
+        <!-- Add this inside your .dashboard_content, after the existing .info div -->
+<div class="playground">
+    <h3>Try It Yourself!</h3>
+    <div class="playground-container">
+        <div class="playground-editor">
+            <label for="cssInput"><strong>Type CSS here:</strong></label>
+            <textarea id="cssInput" rows="8">h1 {
+  color: #472ca1;
+  text-align: center;
+}
+p {
+  font-size: 18px;
+  color: #8ad0b6;
+}</textarea>
+            <button onclick="applyCSS()">Run CSS</button>
+        </div>
+        <div class="playground-preview">
+            <iframe id="previewFrame"></iframe>
+        </div>
+    </div>
+</div>
+<script>
+const htmlContent = `
+  <h1>Hello CSS!</h1>
+  <p>This is a sample paragraph. Change my style!</p>
+`;
+
+function applyCSS() {
+    const css = document.getElementById('cssInput').value;
+    const iframe = document.getElementById('previewFrame');
+    iframe.srcdoc = `<style>${css}</style>${htmlContent}`;
+}
+// Run once on load
+applyCSS();
+function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+
+</script>
+    </section>
+
+</body>
+</html>

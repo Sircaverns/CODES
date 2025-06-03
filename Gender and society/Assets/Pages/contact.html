@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="icon" type="image/png" href="../style/icon.png">
+    <link rel="stylesheet" href="../style/styles.css?v=1.0">
+     <title>Document</title>
+</head>
+<body>
+    <nav>
+         <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+         <div class="nav-links">    
+        <a href="../../index.html">Home</a>
+        <a class="blk" href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="blk"  href="html-tutorial.html">HTML Tutorial</a>
+        <a href="css-tutorial.html">CSS Tutorial</a>
+    </div>
+</nav>
+<section class="contact-section">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <label>
+                Name:<br>
+                <input type="text" name="name" required>
+            </label><br>
+            <label>
+                Email:<br>
+                <input type="email" name="email" required>
+            </label><br>
+            <label>
+                Message:<br>
+                <textarea name="message" rows="4" required></textarea>
+            </label><br>
+            <button type="submit">Send</button>
+        </form>
+        <div class="contact-info">
+            <p>Or email us at <a href="mailto:gemzonemmanuel345@gmail.com">gemzonemmanuel345@gmail.com</a></p>
+            <p>Follow us on 
+                <a href="https://www.facebook.com/Kamjo30">Facebook</a> | 
+                <a href="https://web.telegram.org/a/#6061694224">Telegram</a>
+            </p>
+        </div>
+    </div>
+</section>
+    <script>
+    function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="icon" type="image/png" href="../style/icon.png">
+    <link rel="stylesheet" href="../style/styles.css?v=1.0">
+    <title>HTML Tutorial</title>
+</head>
+<body>
+    <nav>
+         <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+         <div class="nav-links">    
+        <a href="../../index.html">Home</a>
+        <a class="blk" href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="blk"  href="html-tutorial.html">HTML Tutorial</a>
+        <a href="css-tutorial.html">CSS Tutorial</a>
+    </div>
+</nav>
+    <section class="dashboard">
+        <div class="dashboard_content">
+            <div class="intro">
+                <h2>HTML Basics Tutorial</h2>
+                <p>HTML (HyperText Markup Language) is the standard language for creating web pages.</p>
+            </div>
+            <div class="info">
+                <h3>1. Basic Structure</h3>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Content goes here
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+                <h3>2. Headings</h3>
+                <p>Use <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings:</p>
+                <pre>
+&lt;h1&gt;This is a Heading 1&lt;/h1&gt;
+&lt;h2&gt;This is a Heading 2&lt;/h2&gt;
+                </pre>
+                <h3>3. Paragraphs</h3>
+                <pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+                </pre>
+                <h3>4. Links</h3>
+                <pre>
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+                </pre>
+                <h3>5. Images</h3>
+                <pre>
+&lt;img src="image.jpg" alt="Description"&gt;
+                </pre>
+                <h3>6. Styling HTML with CSS</h3>
+<p>You can style your HTML using CSS (Cascading Style Sheets) in three main ways:</p>
+<ul>
+    <li>
+        <strong>Inline CSS:</strong> Add the <code>style</code> attribute directly to an HTML element.<br>
+        <code>&lt;p style="color:blue;"&gt;This is blue text.&lt;/p&gt;</code>
+    </li><br>
+    <li>
+        <strong>Internal CSS:</strong> Place CSS rules inside a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section.<br>
+        <pre>
+&lt;style&gt;
+  p { color: blue; }
+&lt;/style&gt;
+        </pre>
+    </li>
+    <li>
+        <strong>External CSS:</strong> Link to a separate CSS file using the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code>.<br>
+        <pre>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+        </pre>
+    </li><br>
+</ul>
+<p>External CSS is the most common and recommended way, as it keeps your code organized and reusable across multiple pages.</p>
+<h3>7. Components Used in This HTML Page</h3>
+<p>This page uses several important HTML components to organize content and create an interactive learning experience:</p>
+<ul>
+    <li>
+        <strong>&lt;!DOCTYPE html&gt; and &lt;html&gt;:</strong> Declare the document type and start the HTML document.
+    </li><br>
+    <li>
+        <strong>&lt;head&gt;:</strong> Contains meta information, the page title, links to the favicon and external CSS for styling.
+    </li><br>
+    <li>
+        <strong>&lt;nav&gt; and &lt;ul&gt;:</strong> The navigation bar uses an unordered list of links (&lt;a&gt;) to help users move between pages.
+    </li><br>
+    <li>
+        <strong>&lt;section class="dashboard"&gt;:</strong> Groups the main content of the page.
+    </li><br>
+    <li>
+        <strong>&lt;div class="dashboard_content"&gt;:</strong> Contains all the tutorial information and interactive elements.
+    </li><br>
+    <li>
+        <strong>&lt;div class="intro"&gt; and &lt;div class="info"&gt;:</strong> Present the introduction and step-by-step HTML basics, using headings (&lt;h2&gt;, &lt;h3&gt;), paragraphs (&lt;p&gt;), code examples (&lt;pre&gt;, &lt;code&gt;), and lists (&lt;ul&gt;, &lt;li&gt;).
+    </li><br>
+    <li>
+        <strong>&lt;div class="playground"&gt;:</strong> An interactive area where users can type HTML code in a &lt;textarea&gt;, click a button to run it, and see the result live in an &lt;iframe&gt;.
+    </li><br>
+    <li>
+        <strong>&lt;script&gt;:</strong> JavaScript that updates the preview area with the user’s HTML code.
+    </li><br>
+</ul>
+<p>Together, these components create a structured, easy-to-follow tutorial page with both explanations and hands-on practice!</p>
+<p><b>"you can also see the code used by pressing ctrl+U when using pc or right click and inspect"</b></p>
+            </div>
+            
+        </div>
+        <div class="playground">
+    <h3>Try HTML Yourself!</h3>
+    <div class="playground-container">
+        <div class="playground-editor">
+            <label for="htmlInput"><strong>Type HTML here:</strong></label>
+            <textarea id="htmlInput" rows="8">&lt;h1&gt;Hello HTML!&lt;/h1&gt;
+                &lt;p&gt;Edit this code and click Run to see the result.&lt;/p&gt;</textarea>
+            <button onclick="runHTML()">Run HTML</button>
+        </div>
+        <div class="playground-preview">
+            <iframe id="htmlPreview"></iframe>
+        </div>
+    </div>
+</div>
+<script>
+function runHTML() {
+    const html = document.getElementById('htmlInput').value;
+    document.getElementById('htmlPreview').srcdoc = html;
+}
+// Run once on load
+runHTML();
+function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+
+</script>
+    </section>
+</body>
+</html>
